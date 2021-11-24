@@ -11,6 +11,7 @@
 -define(SERVER, ?MODULE).
 
 start_link() ->
+        logger:debug("start_link", []),
         supervisor:start_link({local, ?SERVER}, ?MODULE, []).
 
 init([]) ->
